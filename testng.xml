@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CrossBrowserSuite" thread-count="2" parallel="tests">
+
+    <!-- Desktop config -->
+    <test name="ChromeTest">
+        <parameter name="browserType" value="chromium"/>
+        <parameter name="width" value="1920"/>
+        <parameter name="height" value="1080"/>
+        <classes>
+
+            <class name="ge.tbc.testautomation.tests.SearchTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.DefaultMapStateTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyExchangeTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationVisualTest"/>
+
+        </classes>
+    </test>
+
+    <!--mobile config-->
+    <test name="Chrome_Mobile">
+        <parameter name="browserType" value="chromium"/>
+        <parameter name="width" value="365"/>
+        <parameter name="height" value="667"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.SearchTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyExchangeTest"/>
+            <class name="ge.tbc.testautomation.tests.DefaultMapStateTest"/>
+        </classes>
+    </test>
+
+    <test name="WebkitTest">
+        <parameter name="browserType" value="webkit"/>
+        <classes>
+
+            <class name="ge.tbc.testautomation.tests.SearchTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.DefaultMapStateTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyExchangeTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationVisualTest"/>
+        </classes>
+    </test>
+
+    <test name="firefox">
+        <parameter name="browserType" value="firefox"/>
+        <classes>
+
+            <class name="ge.tbc.testautomation.tests.SearchTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.OffersTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.DefaultMapStateTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyExchangeTest"/>
+            <class name="ge.tbc.testautomation.tests.GlobalNavigationVisualTest"/>
+        </classes>
+    </test>
+</suite>
